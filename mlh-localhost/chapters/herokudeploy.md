@@ -1,4 +1,5 @@
-## 3.0 Deploying an app to a Swarm
+## 3.0 Deploying your Webapp to Heroku
+
 This portion of the tutorial will guide you through deploying the Flask application we made to Heroku using Docker.
 
 **Important.**
