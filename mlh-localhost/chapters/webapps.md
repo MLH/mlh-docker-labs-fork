@@ -401,28 +401,7 @@ Head over to `http://localhost:8888` and your app should be live. **Note** If yo
 
 Hit the Refresh button in the web browser to see a few more cat images.
 
-### 2.3.4 Push your image
-Now that you've created and tested your image, you can push it to [Docker Hub](https://hub.docker.com). All you have to do is:
-
-```
-docker push YOUR_USERNAME/myfirstapp
-```
-Now that you are done with this container, stop and remove it since you won't be using it again.
-
-Open another terminal window and execute the following commands:
-
-```
-$ docker stop myfirstapp
-$ docker rm myfirstapp
-```
-
-or
-
-```
-$ docker rm -f myfirstapp
-```
-
-### 2.3.5 Dockerfile commands summary
+### 2.3.4 Dockerfile commands summary
 
 Here's a quick summary of the few basic commands we used in our Dockerfile.
 
@@ -441,9 +420,7 @@ Here's a quick summary of the few basic commands we used in our Dockerfile.
 
 * `EXPOSE` opens ports in your image to allow communication to the outside world when it runs in a container.
 
-* `PUSH` pushes your image to Docker Hub, or alternately to a [private registry](TODO: add URL)
-
 >**Note:** If you want to learn more about Dockerfiles, check out [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
 ## Next Steps
-For the next step in the tutorial head over to [3.0 Run a multi-container app with Docker Compose](./votingapp.md)
+For the next step in the tutorial head over to [3.0 Hosting your Docker Images](./hosting.md)
