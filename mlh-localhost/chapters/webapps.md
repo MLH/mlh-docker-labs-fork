@@ -191,15 +191,15 @@ Create the **app.py** with the following content:
 
 ```
 from flask import Flask, render_template
-import random, os
+import random
 
 app = Flask(__name__)
 
 # list of cat images
 images = [
-    "http://tny.im/88H",
-    "http://tny.im/88I",
-    "http://tny.im/88J"
+    "http://bit.ly/docker-cat-1",
+    "http://bit.ly/docker-cat-2",
+    "http://bit.ly/docker-cat-3"
 ]
 
 @app.route('/')
@@ -208,7 +208,6 @@ def index():
     return render_template('index.html', url=url)
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 5000))
     app.run(host="0.0.0.0")
 ```
 #### requirements.txt
@@ -275,7 +274,7 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
 
 4. Specify the port number which needs to be exposed. Since our flask app is running on `5000` that's what we'll expose.
   ```
-  ONBUILD EXPOSE $PORT
+  EXPOSE 5000
   ```
 
 5. The last step is the command for running the application which is simply - `python ./app.py`. Use the [CMD](https://docs.docker.com/engine/reference/builder/#cmd) command to do that:
@@ -306,7 +305,7 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
   COPY templates/index.html /usr/src/app/templates/
 
   # tell the port number the container should expose
-  ONBUILD EXPOSE $PORT
+  EXPOSE 5000
 
   # run the application
   CMD ["python", "/usr/src/app/app.py"]
