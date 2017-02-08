@@ -16,9 +16,25 @@
 ## New
 
  - Which of these does Docker, Inc. do?
+   - Docker, Inc. is the primary sponsor of the Docker project.
+   - Docker, Inc. offers Containers as a Service (CaaS).
+   - All of the above [Correct]
  - Which of these benefits apply to Docker?
- - Which of the following statments about Docker containers and VMs is true?
+   - Docker makes it easy for developers to write code that they can run anywhere via Containers.
+   - Docker Containers are lightweight, portable packages of code that can easily be shipped around between computers.
+   - Docker Containers share share the resources of the host computer running them.
+   - All of the above [Correct]
+ - Which of the following is the recommended analogy for thinking about Docker Containers?
+   - A neighborhood of Houses
+   - An Apartment Building [Correct]
+   - A City
+   - A Tent
  - How do you run a Docker container interactively?
+   - docker run -d
+   - docker run -t [Correct]
+   - docker run -i
+   - docker run -p
+ 
 
 ## Remove
 
