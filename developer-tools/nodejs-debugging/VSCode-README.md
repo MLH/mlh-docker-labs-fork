@@ -27,7 +27,7 @@ FROM node:5.11.0-slim
 
 WORKDIR /code
 
-RUN npm install -g nodemon
+RUN npm install -g nodemon@">=1.18.10"
 
 COPY package.json /code/package.json
 RUN npm install && npm ls
